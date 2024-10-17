@@ -1,0 +1,101 @@
+.main{
+    background-image: url(../img/background.jpg);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-position: center;    
+    background-attachment: fixed;
+}
+
+.title{
+    color: white;
+    font-family: Ovo, serif;
+    display: flex;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; 
+    text-shadow: 
+        1px 1px 0 black, 
+        -1px 1px 0 black, 
+        1px -1px 0 black, 
+        -1px -1px 0 black; 
+}
+
+.block{
+    height: 2000px;
+    width: 1400px;
+    background-color: rgba(106, 105, 106, 0.977);
+    border: 3px black solid;
+    margin-top: 20px; 
+    border-radius: 15px;
+    box-shadow: 0 0 50px gray;
+}
+
+.descr{
+    height: 300px;
+    width: 1300px;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 40px;
+    display: flex;  
+    gap: 20px;
+    color: aliceblue;
+}
+
+.descr img {
+    max-height: 100%; 
+    max-width: 200px;
+    box-shadow: 0 0 10px gray;
+    transition: transform 0.7s ease;
+}
+
+.descr img:hover{
+    transform: scale(1.7);
+    box-shadow: 0 0 50px black;
+}
+
+.about{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #1d1a1ab9;
+    color:rgb(230, 226, 252);
+    padding: 5px;
+}
+
+.about p{
+    margin: 10px;
+    font-family: monospace;
+}
+
+.awards{
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    color: aliceblue;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+.awards img{
+    max-width: 250px; 
+    max-height: 350px; 
+    box-shadow: 0 0 10px gray;
+    transition: transform 0.7s ease;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.awards div{
+    flex-basis: 90%;
+    margin-right: 20px;
+}
+
+.awards img:hover{
+    transform: scale(1.7);
+    box-shadow: 0 0 50px black;
+}
