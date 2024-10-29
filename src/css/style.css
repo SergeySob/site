@@ -159,7 +159,7 @@ body {
 	margin: 0 auto;
 }
 
-.slides .slide{ /*все изображения справа друг от доруга*/
+.slides .slide{ 
 	width: 25%;
 	float: left;
 }
@@ -206,7 +206,7 @@ body {
 	height: 40px;
 	width: 40px;
 }
-/*настройка переключения и положения для левой стрелки*/
+
 #switch1:checked ~ .arrows label:nth-child(4), 
 #switch2:checked ~ .arrows label:nth-child(1),
 #switch3:checked ~ .arrows label:nth-child(2),
@@ -217,7 +217,7 @@ body {
 	display: block;
 }
 
-/*настройка переключения и положения для правой стрелки*/
+
 #switch1:checked ~ .arrows label:nth-child(2),
 #switch2:checked ~ .arrows label:nth-child(3),
 #switch3:checked ~ .arrows label:nth-child(4),
@@ -231,7 +231,7 @@ body {
 label, a{ 
 	cursor: pointer;
 }
-/*скрываетвсе radio-input*/
+
 input[type="radio"]{ 
 	display: none;
 }
