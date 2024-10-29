@@ -23,7 +23,7 @@
 }
 
 .block{
-    height: 3000px;
+    height: 8000px;
     width: 1400px;
     background-color: rgba(106, 105, 106, 0.977);
     border: 3px black solid;
@@ -43,17 +43,57 @@
     color: aliceblue;
 }
 
-.descr img {
+.descr label {
     max-height: 100%; 
     max-width: 200px;
     box-shadow: 0 0 10px gray;
     transition: transform 0.7s ease;
+    cursor: pointer;
 }
 
-.descr img:hover{
+.descr label:hover{
     transform: scale(1.7);
     box-shadow: 0 0 50px black;
 }
+
+.descr input[type="checkbox"] {
+    display: none;
+}
+
+#imageClick:checked ~ label:hover {
+    transform: none; 
+}
+
+#imageClick:checked ~ label {
+    position: fixed;
+    top: 3%;
+    left: 36%;
+    max-width: 28vw; 
+    max-height: 28vh; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 101;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 100; 
+    opacity: 0; 
+    pointer-events: none;
+}
+
+
+#imageClick:checked ~ .overlay {
+    opacity: 1; 
+    pointer-events: all; 
+}
+
+
 
 .about{
     margin-left: 20px;
@@ -83,7 +123,7 @@
     padding-right: 20px;
     padding-left: 20px;
     border-radius: 15px;
-    font-family: sans-serif;;
+    font-family: sans-serif;
 }
 
 .awards img{
@@ -289,3 +329,62 @@ input[type="radio"]{
     color: white;
 }
 
+.anime{
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: aliceblue;
+    font-size: 20px;
+    background-color: rgb(79, 79, 79);
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 15px;
+    font-family: sans-serif;
+}
+
+.animeImage{
+    display: flex;
+    justify-content: space-between;
+}
+
+.anime img{
+    max-width: 250px; 
+    max-height: 350px; 
+    box-shadow: 0 0 10px gray;
+    transition: transform 0.7s ease;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.anime div{
+    flex-basis: 90%;
+    margin-right: 20px;
+}
+
+.anime img:hover{
+    transform: scale(1.7);
+    box-shadow: 0 0 50px black;
+}
+
+.trailer{
+    text-align: center;
+}
+
+.trailer iframe:first-child{
+    margin-right: 50px; 
+}
+
+.trailerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.text{
+    display: flex;
+    margin-top: -15px;
+}
+
+.text p:first-child{
+    margin-right: 450px;
+}
