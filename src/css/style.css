@@ -35,7 +35,7 @@
 .descr{
     height: 300px;
     width: 1300px;
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 40px;
     margin-left: 40px;
     display: flex;  
@@ -387,4 +387,67 @@ input[type="radio"]{
 
 .text p:first-child{
     margin-right: 450px;
+}
+
+.game{
+    padding-top: 1px;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: aliceblue;
+    font-size: 20px;
+    background-color: rgb(79, 79, 79, 0.977);
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    font-family: sans-serif;
+}
+
+.aboutGame{
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 24px;
+    background-color: #1d1a1ab9;
+    color:rgb(230, 226, 252);
+    padding: 1px;
+    padding-left: 20px;
+}
+
+.gameDesc {
+    display: flex;
+}
+
+.game img{
+    max-width: 250px; 
+    max-height: 350px; 
+    transition: transform 0.7s ease;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.game img:hover{
+    transform: scale(1.7);
+}
+
+.quote{
+    font-family: monospace;
+    font-style: italic;
+    border-left: 3px solid gray;
+    padding: 10px 10px 5px 15px;
+    background-color:#414141;
+}
+
+
+.trailerContainerGame{
+    display: flex;
+    justify-content: center;
+}
+
+.trailerContainerGame div:first-child{
+    margin-right: 75px;
+}
+
+.gameTrailer p{
+    text-align: center;
 }
