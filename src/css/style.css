@@ -23,7 +23,7 @@
 }
 
 .block{
-    height: 8000px;
+    height: 8100px;
     width: 1400px;
     background-color: rgba(106, 105, 106, 0.977);
     border: 3px black solid;
@@ -455,7 +455,7 @@ input[type="radio"]{
 
 .tabs {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
   max-width: 2000px;
   background: gray;
   box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
@@ -529,14 +529,15 @@ input[type="radio"]{
 }
 
 .goodsImages{
-    width: 1000px;
-    display: flex;
-    flex-wrap: wrap;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
 }
 
 .goodImg{
-    width: 300px;
-    height: 350px;
+    width: auto;
+    height: auto;
     color: antiquewhite;
     text-align: center;
     margin: 5px;
@@ -562,4 +563,22 @@ input[type="radio"]{
 
 .goodImg img:hover{
     transform: scale(1.7);
+}
+
+.authorBlock{
+    display: flex;
+}
+
+.authorBlock img{
+    width: 400px;
+    height: 500px;
+    margin-top: 10px;
+    transition: transform 0.7s ease;
+    align-self: center;
+    box-shadow: 0 0 10px gray;
+    border: solid black 2px;
+}
+
+.authorBlock img:hover{
+    transform: scale(1.5);
 }
