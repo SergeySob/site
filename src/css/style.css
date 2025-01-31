@@ -23,18 +23,269 @@
 }
 
 .block{
-    height: 8125px;
+    height:auto;
     width: 1400px;
     background-color: rgba(106, 105, 106, 0.977);
     border: 3px black solid;
     margin-top: 20px; 
-    border-radius: 15px;
+    border-radius: 15px;    
     box-shadow: 0 0 50px gray;
 }
 
+@media (max-width: 425px) {
+    .block{
+        height:auto;
+        width: 100vh;
+        background-color: rgba(106, 105, 106, 0.977);
+        border: 3px black solid;
+        margin-top: 20px; 
+        border-radius: 15px;
+        box-shadow: 0 0 50px gray;
+    }
+
+    .descr {
+        font-size: 16px; /* Уменьшаем размер шрифта */
+        margin-top: 20px; /* Уменьшаем отступ сверху */
+        margin-left: 10px; /* Уменьшаем отступ слева */
+        flex-direction: column; /* Размещаем элементы в колонку */
+        align-items: center; /* Центрируем элементы */
+        gap: 10px; /* Уменьшаем расстояние между элементами */
+    }
+
+    .descr img {
+        max-width: 150px; /* Уменьшаем максимальную ширину изображений */
+        box-shadow: 0 0 5px gray; /* Уменьшаем размер тени */
+    }
+
+    .awards {
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        flex-direction: column;
+        font-size: 16px;
+        padding: 10px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .awards img {
+        max-width: 150px;
+        max-height: 200px;
+        margin: 10px auto;
+    }
+
+    .awards div {
+        flex-basis: 100%;
+        margin: 0;
+    }
+
+    .awards img:hover {
+        transform: scale(1.5); /* Уменьшено увеличение при ховере */
+        box-shadow: 0 0 30px black;
+    }
+
+    .slider {
+        max-width: 100%;
+        top: 5px;
+      }
+    
+      .slides .slide {
+        width: 100%; /* Каждое изображение занимает всю ширину */
+      }
+    
+      .slides .slider-inner {
+        width: 400%; /* Сохраняем ширину для всех слайдов */
+      }
+    
+      .overflow {
+        width: 100%;
+        overflow: hidden;
+      }
+    
+      .slide img {
+        width: 250px; /* Уменьшены размеры изображений */
+        height: 350px;
+        margin: 0 auto;
+      }
+    
+      .slide h2 {
+        font-size: 18px;
+        padding-top: 5px;
+        margin-top: 5px;
+      }
+    
+      .slide div {
+        padding: 5px;
+        font-size: 14px; /* Уменьшен размер шрифта */
+      }
+    
+      .slide li {
+        font-size: 18px;
+      }
+    
+      .arrows label {
+        height: 30px;
+        width: 30px;
+        margin: -200px 10px 0 10px; /* Сокращены отступы */
+      }
+    
+      .arrows {
+        margin: -20% 0 0 0;
+        height: 40px;
+      }
+    
+      .dots label {
+        width: 10px;
+        height: 10px;
+      }
+    
+      .dots {
+        margin-top: 10px;
+      }
+
+        .printed {
+        height: auto; /* Убираем фиксированную высоту */
+        padding: 10px; /* Добавляем отступы */
+    }
+
+    .printed h1 {
+        font-size: 24px; /* Уменьшен размер шрифта */
+        padding-left: 10px;
+        text-align: center;
+    }
+
+    .printed p {
+        font-size: 16px;
+        text-align: justify; /* Добавляем выравнивание для удобства чтения */
+    }
+
+    .anime {
+        margin: 20px 10px; /* Уменьшены внешние отступы */
+        font-size: 16px; /* Уменьшен размер шрифта */
+        padding: 10px; /* Сужены внутренние отступы */
+    }
+
+    .animeImage {
+        flex-direction: column; /* Ставим изображения в столбик */
+        align-items: center; /* Центрируем изображения */
+    }
+
+    .anime img {
+        max-width: 200px; /* Уменьшены размеры изображений */
+        max-height: 280px;
+        margin: 10px 0; /* Добавлены внешние отступы */
+    }
+
+    .anime div {
+        margin: 10px 0; /* Сужены отступы */
+        text-align: center; /* Выравнивание текста по центру */
+    }
+
+    .trailer {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .trailer iframe:first-child {
+        margin-right: 0; /* Убираем правый отступ */
+        width: 280px; /* Уменьшаем ширину видео */
+        height: 160px;
+    }
+
+    .trailerContainer {
+        flex-direction: column; /* Ставим элементы в столбик */
+        align-items: center;
+    }
+
+    .text {
+        flex-direction: column; /* Выравниваем текст по столбцу */
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .text p:first-child {
+        margin-right: 0; /* Убираем большой правый отступ */
+        margin-bottom: 10px; /* Добавляем отступ между параграфами */
+    }
+
+    .text p {
+        font-size: 14px; /* Уменьшен размер шрифта */
+    }
+
+    .authorBlock {
+        display: flex;
+        flex-direction: row; /* Стандартное направление */
+        gap: 20px; /* Расстояние между элементами */
+        flex-wrap: wrap; /* Чтобы элементы не вылазили из контейнера */
+        justify-content: center;
+    }
+
+    .authorBlock img {
+        width: 100%; /* Задаем адаптивную ширину */
+        max-width: 400px; /* Максимальная ширина на больших экранах */
+        height: auto; /* Сохраняем пропорции изображения */
+        margin-top: 10px;
+        transition: transform 0.7s ease;
+        align-self: center;
+        box-shadow: 0 0 10px gray;
+        border: solid black 2px;
+    }
+
+    .authorBlock img:hover {
+        transform: scale(1.5); /* Увеличение при наведении */
+    }
+
+    .authotBlockDiv {
+        padding-top: 1px;
+        margin-top: 50px;
+        margin-left: 20px; /* Снижаем боковые отступы */
+        margin-right: 20px;
+        color: aliceblue;
+        font-size: 18px; /* Уменьшаем шрифт на мобильных */
+        background-color: rgb(79, 79, 79, 0.977);
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        border-radius: 15px;
+        font-family: sans-serif;
+        margin-bottom: 20px;
+    }
+
+    .trailerContainerGame {
+        display: flex;
+        flex-wrap: wrap; /* Для адаптивного переноса блоков на узких экранах */
+        justify-content: center; /* Центровка блоков */
+        gap: 20px; /* Добавляем расстояние между блоками */
+    }
+    
+    .trailerContainerGame div:first-child {
+        margin-right: 0; /* Убираем фиксированный отступ, так как добавлен gap */
+    }
+    
+    .gameTrailer {
+        flex: 1 1 100%; /* Блоки занимают 100% ширины на малых экранах */
+        max-width: 560px; /* Максимальная ширина каждого видео-блока */
+    }
+    
+    .gameTrailer iframe {
+        width: 100%; /* Видео масштабируется под размер блока */
+        height: auto; /* Высота рассчитывается автоматически */
+        aspect-ratio: 16 / 9; /* Сохраняем пропорции 16:9 */
+        border: none; /* Убираем рамку */
+    }
+    
+    .gameTrailer p {
+        text-align: center; /* Выравнивание текста по центру */
+        margin-top: 10px; /* Добавляем отступ сверху */
+        color: aliceblue; /* Цвет текста */
+        font-size: 16px; /* Размер шрифта */
+    }
+    
+ }
+
 .descr{
-    height: 300px;
-    width: 1300px;
+    height: auto;
+    width: auto;
     font-size: 20px;
     margin-top: 40px;
     margin-left: 40px;
@@ -43,7 +294,7 @@
     color: aliceblue;
 }
 
-.descr label {
+.descr img {
     max-height: 100%; 
     max-width: 200px;
     box-shadow: 0 0 10px gray;
@@ -51,47 +302,12 @@
     cursor: pointer;
 }
 
-.descr label:hover{
+.descr img:hover{
     transform: scale(1.7);
     box-shadow: 0 0 50px black;
 }
 
-.descr input[type="checkbox"] {
-    display: none;
-}
 
-#imageClick:checked ~ label:hover {
-    transform: none; 
-}
-
-#imageClick:checked ~ label {
-    position: fixed;
-    top: 3%;
-    left: 36%;
-    max-width: 28vw; 
-    max-height: 28vh; 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    z-index: 101;
-    cursor: pointer;
-}
-
-.overlay {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 100; 
-    opacity: 0; 
-    pointer-events: none;
-}
-
-
-#imageClick:checked ~ .overlay {
-    opacity: 1; 
-    pointer-events: all; 
-}
 
 
 
@@ -366,18 +582,40 @@ input[type="radio"]{
     box-shadow: 0 0 50px black;
 }
 
-.trailer{
+.trailer {
     text-align: center;
+    width: 100%;
 }
 
-.trailer iframe:first-child{
-    margin-right: 50px; 
+.trailer iframe {
+    width: 100%;
+    max-width: 560px; /* Ограничиваем максимальную ширину видео */
+    height: auto; /* Поддержка пропорций видео */
+    margin-bottom: 20px;
 }
 
-.trailerContainer{
+.trailerContainer {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
+    width: 100%;
+    padding: 0 15px; /* Отступы по бокам для маленьких экранов */
+}
+
+@media screen and (max-width: 425px) {
+    .trailer iframe {
+        width: 100%;
+        height: 200px; /* Уменьшаем высоту видео для маленьких экранов */
+        max-width: none; /* Убираем ограничение по ширине */
+    }
+
+    .trailerContainer {
+        padding: 0 10px; /* Добавляем дополнительные отступы для контейнера */
+    }
+
+    .text p {
+        font-size: 14px; /* Уменьшаем размер текста для мобильных устройств */
+    }
 }
 
 .text{
@@ -416,6 +654,15 @@ input[type="radio"]{
 
 .gameDesc {
     display: flex;
+}
+
+@media (max-width: 425px) {
+    .gameDesc {
+        display: flex;
+        flex-wrap: wrap; /* Для адаптивного переноса блоков на узких экранах */
+        justify-content: center; /* Центровка блоков */
+        gap: 20px; /* Добавляем расстояние между блоками */
+    }
 }
 
 .game img{
@@ -582,3 +829,20 @@ input[type="radio"]{
 .authorBlock img:hover{
     transform: scale(1.5);
 }
+
+.authotBlockDiv{
+    padding-top: 1px;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: aliceblue;
+    font-size: 20px;
+    background-color: rgb(79, 79, 79, 0.977);
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+

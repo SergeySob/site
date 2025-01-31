@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: darkgray;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main::-webkit-scrollbar {
+    width: 10px; 
+}
+
+.main::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px; 
+}
+
+.main::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px; 
+    border: 3px solid #f1f1f1; 
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.head {
+    width: 100%;
+    height: 60px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; 
+    position: relative;
+}
+
+.bookname{
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+.chapterDiv{
+    width: 80%;
+    height: auto;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.chapterNavigation{
+    display: flex;
+    cursor: pointer;
+    padding-right: 5px;
+}
+
+.arrowButton{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 25px;
+}
+
+.arrowButton:hover{
+    background-color: #c5c5c5;
+}
+
+.settings{
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 10px;
+}
+
+.toggleSettings {
+    display: none;
+}
+
+.toggleSettingsBt {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+@media (max-width: 320px) {
+    .toggleSettingsBt {
+        padding: 8px 6px;
+    }
+
+    .arrowButton{
+        width: 20px;
+    }
+
+
+}
+
+.toggleSettingsBt:hover {
+    background-color: #777;
+}
+
+.settingsPanel {
+    position: absolute;
+    top: 120%; 
+    left: -400%;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    max-width: auto;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.toggleSettings:checked ~ .settingsPanel {
+    display: flex;
+}
+
+.tableOfContentWrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+.profile{
+    display: flex;
+    gap: 10px;
+    margin: auto;
+}
+
+.profileBt{
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#fontSizeInput {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#fontSizeValue {
+    font-size: 16px;
+    color: #333;
+}
+
+#fontSelect {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+#lineHeightInput {
+    width: 100%;
+    cursor: pointer;
+}
+
+#widthInput {
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.toggleCheckbox {
+    display: none;
+}
+
+.toggleButton {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggleButton:hover {
+    background-color: #777;
+}
+
+.tableOfContent {
+    position: absolute;
+    top: 120%; 
+    left: -172%;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    max-width: auto;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.tableOfContent::-webkit-scrollbar {
+    width: 10px; 
+}
+
+.tableOfContent::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px; 
+}
+
+.tableOfContent::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px; 
+    border: 3px solid #f1f1f1; 
+}
+
+.tableOfContent::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.toggleCheckbox:checked ~ .tableOfContent {
+    display: flex;
+}
+
+.tableOfContent button {
+    background-color: #f9f9f9;
+    color: black;
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.tableOfContent button:hover {
+    background-color: #eee;
+}
+
+@media (max-width: 426px) {
+
+    .tableOfContent {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: none;
+        max-height: 100%;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.95); 
+        padding: 30px; 
+        overflow-y: auto;
+        z-index: 10;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .tableOfContent button {
+        width: 100%;
+        font-size: 18px;
+        padding: 12px;
+        margin-bottom: 10px; 
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .toggleCheckbox:checked ~ .tableOfContent {
+        display: flex;
+    }
+
+    .toggleCheckbox:checked ~ .tableOfContentWrapper .toggleButton {
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        background-color: #555;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    
+    
+    
+    .settingsPanel {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        max-height: 100%;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.95); 
+        padding: 30px; 
+        overflow-y: auto;
+        z-index: 10;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    body.no-scroll {
+        overflow: hidden;
+    }
+
+    
+}
+
+.chapterDiv {
+    width: 80%;
+    height: auto;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: 20px; 
+    position: relative;
+}
+
+.navigationPanel {
+    width: 80%;
+    height: 60px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px;
+    border-top: 1px solid #ccc;
+    border-radius: 10px;
+    bottom: 0;
+    left: 0;
+}
+
+.navButton {
+    background-color: #555;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.navButton:hover {
+    background-color: #777;
+}
+
+.likeButton {
+    background-color: rgb(65, 51, 255); 
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.likeButton:hover {
+    background-color: rgb(119, 110, 252); 
+}
+
+.commentsSection {
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px; 
+}
+
+.comment {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.commentHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.userAvatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.commentTime {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.commentText {
+    margin-top: 10px;
+}
+
+.commentActions {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.likeBtn{
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+
+}
+
+.dislikeBtn{
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.likeBtn:hover {
+    background-color: #8efc84;
+}
+
+.dislikeBtn:hover{
+    background-color: #f56642;
+}
+
+.replies {
+    margin-top: 15px;
+    padding-left: 20px;
+    border-left: 2px solid #ddd;
+}
+
+.reply {
+    background-color: #e9e9e9;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.replyHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.replyInput, .commentInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    resize: vertical;  
+    min-height: 60px;
+    border-radius: 5px;
+}
+
+.replyForm {
+    margin-top: 15px;
+    display: none;  
+}
+
+.submitReply {
+    margin-top: 10px;
+    background-color: #555;
+    color: white;
+    padding: 5px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submitReply:hover {
+    background-color: #777;
+}
+
+.newCommentForm {
+    margin-top: 20px;
+}
+
+.submitComment {
+    margin-top: 10px;
+    background-color: #555;
+    color: white;
+    padding: 5px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.replyBtn{
+    margin-top: 10px;
+    background-color: #555;
+    color: white;
+    padding: 5px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.replyBtn:hover {
+    background-color: #777;
+}
+
+.submitComment:hover {
+    background-color: #777;
+}
